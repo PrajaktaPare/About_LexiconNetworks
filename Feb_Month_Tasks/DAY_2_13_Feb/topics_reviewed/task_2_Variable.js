@@ -24,7 +24,7 @@ if (true) {
     let y = 20;
 }
 
-console.log(x); // works
+console.log(x); 
 console.log(y); 
 
 
