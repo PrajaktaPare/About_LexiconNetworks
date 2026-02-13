@@ -29,6 +29,29 @@ let obj ={
 console.log(obj)
 console.log(obj.id + " id has name "+obj.name)
 
+//Memory allocation in objects
+
+let obj1 = { value: 10 };
+let obj2 = obj1;
+
+obj2.value = 20;
+
+console.log(obj1.value);
+
+// Heap Memory:
+// { value: 10 }
+
+// Stack:
+// obj1 → address 0x001
+
+// obj1 → 0x001
+// obj2 → 0x001
+
+// Primitive types are stored by value.
+// Objects are stored by reference.
+
+
+
 
 //dynamic typing 
 

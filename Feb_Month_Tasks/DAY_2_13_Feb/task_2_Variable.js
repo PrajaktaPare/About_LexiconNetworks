@@ -6,22 +6,52 @@
 // block(let) and global(var) Scoping and redeclaration(let,var) reasssignment(var)
 
 var b = 10;
+b=30; //reassigning
+
 function f(){
     var b=20; //function scope variable 
-    b=20; //reassigning
-    // console.log(b);
+    
+    console.log(b);
 }
 f(); //The function variable is destroyed after execution finishes
 console.log(b);
 
 
-// let a=10;
-// function f(){
-//     let a=20;
-//     console.log(a);
-// }
-// f();
-// console.log(a);
 
-//hoisting where declarations appears to be at the top while executing intializations are not hoisted
 
+if (true) {
+    var x = 10;
+    let y = 20;
+}
+
+console.log(x); // works
+console.log(y); 
+
+
+
+
+let a=10;
+
+function f(){
+    let a=20;//shadowing
+    console.log(a);
+}
+f();
+console.log(a);
+
+//hoisting where declarations appears to be at the top while executing.. intializations are not hoisted
+// var is hoisted and initialized with undefined
+// let and const are hoisted but not initialized. This is called the Temporal Dead Zone.
+
+console.log(aa)
+var aa;
+aa=10;
+console.log(aa)
+
+
+
+//  console.log(a);
+//   let a;
+
+
+//Scope Chain current scope ->outer scope ->outer scope until global->not found then reference error
