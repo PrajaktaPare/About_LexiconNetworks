@@ -13,6 +13,7 @@ console.log(x);
 
 console.log(10 > 5);   
 console.log(10 < 5);
+
 console.log(10 == "10");  
 console.log(10 === "10");
 
@@ -21,6 +22,14 @@ console.log(10 === "10");
 
 let isLoggedIn = true;
 let isAdmin = false;
+if (isLoggedIn && !isAdmin)
+{
+    console.log("")
+}
+
+if (isLoggedIn && (isAdmin || isUser)){
+
+}
 
 if (isLoggedIn && isAdmin) {
     console.log("Access granted");
@@ -31,7 +40,7 @@ if (isLoggedIn && isAdmin) {
 //Increment & Decrement (++ --)
 
 let a=2
-console.log(a++);
+console.log(--a);
 console.log(a)
 console.log(++a);
 

@@ -5,27 +5,28 @@
 
 // block(let) and global(var) Scoping and redeclaration(let,var) reasssignment(var)
 
-var b = 10;
-b=30; //reassigning
+// var b = 10;
+// b=30; //reassigning
 
-function f(){
-    var b=20; //function scope variable 
+// function f(){
+//     var b=20; //function scope variable 
     
-    console.log(b);
-}
-f(); //The function variable is destroyed after execution finishes
-console.log(b);
+//     console.log(b);
+// }
+// f(); //The function variable is destroyed after execution finishes
+// console.log(b);
 
 
 
 
-if (true) {
-    var x = 10;
-    let y = 20;
-}
+// if (true) {
+//     var x = 10;
+//     let y = 20;
+//     const z=30;
+// }
 
-console.log(x); 
-console.log(y); 
+// console.log(x); 
+// console.log(y); 
 
 
 
@@ -33,7 +34,7 @@ console.log(y);
 let a=10;
 
 function f(){
-    let a=20;//shadowing
+    var a=20;//shadowing
     console.log(a);
 }
 f();
@@ -43,10 +44,10 @@ console.log(a);
 // var is hoisted and initialized with undefined
 // let and const are hoisted but not initialized. This is called the Temporal Dead Zone.
 
-console.log(aa)
-var aa;
-aa=10;
-console.log(aa)
+// console.log(aa)
+// var aa;
+// aa=10;
+// console.log(aa)
 
 
 
