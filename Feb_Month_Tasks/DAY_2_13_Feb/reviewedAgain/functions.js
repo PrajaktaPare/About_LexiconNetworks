@@ -25,3 +25,6 @@ demo2()
 // }
 //switch
 
+
+//for of iterates over objects 
+//for in iterates over array 

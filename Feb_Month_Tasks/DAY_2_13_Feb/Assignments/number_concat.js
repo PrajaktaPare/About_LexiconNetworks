@@ -9,7 +9,7 @@
 // int and float(inbuilt methods)
 
 function numConcat(n1,n2){
-    if (typeof n1 && n2 == Number){
+    if (typeof n1 && typeof n2 == Number){
         return n1+n2
     }
     else{
@@ -17,5 +17,5 @@ function numConcat(n1,n2){
     }
 }
 
-console.log(numConcat(5,4))
+console.log(numConcat(5,"4"))
 console.log(numConcat("2","3"))

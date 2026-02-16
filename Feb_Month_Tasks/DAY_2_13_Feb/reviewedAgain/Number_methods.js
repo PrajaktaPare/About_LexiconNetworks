@@ -1,8 +1,8 @@
 
 n=45.23
 console.log(typeof toString(45))
-console.log(Math.floor(45.6))
-console.log(Math.ceil(45.6))
+console.log(Math.floor(45.6))//45 largest int less than or equal 
+console.log(Math.ceil(45.6))//46 smallest integer greater than or equal to the given number
 console.log(Math.round(45.6))
 console.log(n.toFixed(1))
 

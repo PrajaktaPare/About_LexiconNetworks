@@ -3,13 +3,13 @@ let months=[]
 
 let fruits = ["Apple", "Orange", "Plum"];
 console.log(fruits.length);
-console.log(fruits.reverse())
-fruits.push("Pear");
+console.log(fruits.reverse())//tc sc
+fruits.push("Pear");//tc o(1)
 console.log(fruits)
 fruits.pop()
 console.log(fruits)
 
-fruits.unshift("Grapes")
+fruits.unshift("Grapes")//o(n)
 console.log(fruits)
 fruits.shift()
 console.log(fruits)
@@ -19,8 +19,10 @@ for (let f of fruits)
     console.log(f)
 }
 
-console.log(fruits.toString())
+let afruits=fruits.toString()
+console.log(afruits.split(","))
 
+console.log(fruits.join(""))
 delete fruits[1]
 console.log(fruits)
 
@@ -29,13 +31,17 @@ console.log(fruits)
 
 console.log(" ")
 let arr = ["I", "study", "JavaScript"];
-
+arr.splice(-2,1)
+console.log(arr)
 // console.log(arr.splice(1, 1))//this will remove from 1 index 1 element
 // console.log(arr)
 
 arr.splice(2, 0, "complex", "language");
 console.log(arr)
+arr.splice(2,1,"coding")
+arr.splice(2,1)
 
+arr.splice()
 console.log( " ")
 let arr1 = ["1", "2", "3", "4"]
 console.log( arr1.slice(1, 3) ); // e,s (copy from 1 to 3)
@@ -44,11 +50,22 @@ console.log( arr1.slice(1, 3) ); // e,s (copy from 1 to 3)
 console.log( arr1.slice(-2) ); // s,t (copy from -2 till the end)
 
 console.log(arr1.concat(["5","6"]))
+console.log(arr1.concat("5","6"))
+
 arr1.forEach((item,index,array)=>{
     console.log(index)
 })
 
 console.log(arr1.includes("3"))
+let array=[
+    {id:1,name:"pp"},
+    "string",88
+]
+console.log("includess")
+console.log(array.includes({id:1,name:"pp"}))//check it
+console.log(array.includes("string"))
+console.log(array.includes(88))
+
 
 
 let users = [
@@ -58,7 +75,7 @@ let users = [
   {id: 4, name: "John"}
 ];
 
-let user = users.find(item=>item.id==1)
+let user = users.find(item=>item.id==1)//return that particular object
 
 console.log(user)
 
@@ -93,7 +110,7 @@ console.log(name.split(","))
 //flat
 const a1 = [['1', '2'], ['3', '4', '5',['6'], '7']];
 const a2 = a1.flat(Infinity);
-console.log(a2);
+console.log(a2);//[1,2,3,4,5,6,7]
 
 
 
