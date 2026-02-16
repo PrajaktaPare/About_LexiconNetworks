@@ -3,9 +3,6 @@ message = 'Hello!';
 
 console.log(message)
 
-let user = 'John', age = 25, msg = 'Hello';
-console.log(user)
-
 // Variables named apple and APPLE are two different variables.
 
 // difference between let var const
@@ -20,7 +17,7 @@ if (true) {
   const c = 3;
 }
 
-console.log(a);
+console.log(a);//1
 console.log(b);//not defined
 console.log(c);
 
