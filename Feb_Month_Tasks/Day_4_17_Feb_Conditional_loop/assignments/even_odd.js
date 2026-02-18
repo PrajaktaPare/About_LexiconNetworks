@@ -1,6 +1,6 @@
 // Check odd/even number; 
  
-let num="5"
+let num=49
 let check=Number(num)%2==0 ? "even" : "odd"
 
 if (Number(num)%2==0){
@@ -10,3 +10,6 @@ else{
     console.log("odd")
 }
 
+let num1="123px"
+console.log(parseInt(num1))
+console.log(Number(num1))

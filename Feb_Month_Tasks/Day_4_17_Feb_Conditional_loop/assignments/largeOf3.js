@@ -2,7 +2,7 @@
 
 let a = 10
 let b = 25
-let c = 15;
+let c = 10;
 
 if (a >= b && a >= c) {
 

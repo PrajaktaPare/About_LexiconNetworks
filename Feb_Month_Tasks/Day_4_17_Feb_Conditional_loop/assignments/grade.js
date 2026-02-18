@@ -23,7 +23,7 @@ switch(true){
         break;
     case marks>=70 && marks<90:
         console.log("A")
-        return;
+        break;
     case marks >=35 && marks <70:
         console.log("B")
         break;

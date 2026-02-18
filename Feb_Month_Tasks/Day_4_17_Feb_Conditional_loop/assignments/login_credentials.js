@@ -1,8 +1,12 @@
 
 // Check login credentials (username + password).
 
-let username = "admin";
-let password = " ";
+let username = "admin ";
+let password = " 1234";
+
+//trim method
+username=username.trim()
+password=password.trim()
 
 if (!username || !password) {
 
@@ -19,3 +23,5 @@ else {
     console.log("Invalid credentials");
 
 }
+
+
