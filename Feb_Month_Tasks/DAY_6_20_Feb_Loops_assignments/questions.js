@@ -1,5 +1,5 @@
 // Print even numbers 1–100
-Reverse a number using loop
+// Reverse a number using loop
 // Reverse a string using loop
 // Multiplication table of a number
 // // Print 1–50, skip multiples of 5
@@ -10,5 +10,5 @@ Reverse a number using loop
 // Sum array elements
 // Find max element
 // Count even numbers in array
-Palindrome check (number)
+// Palindrome check (number)
 // Palindrome check (string)
