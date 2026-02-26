@@ -31,6 +31,7 @@
 // higher order*
 // pure impure functions*
 
+
 // recursion
 // callback functions 
 // function optimization basics
