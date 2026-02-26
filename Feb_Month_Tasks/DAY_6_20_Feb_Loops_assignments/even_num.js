@@ -8,3 +8,4 @@ function printEven(){
 printEven()
 
 //let var const error out without declaration
+//without let var const it throqs error what is solution 
