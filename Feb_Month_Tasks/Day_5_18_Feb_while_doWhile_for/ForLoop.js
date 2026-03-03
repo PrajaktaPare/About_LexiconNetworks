@@ -15,10 +15,10 @@ console.log(arr[l-1])
     // console.log("abc")
     console.log(i, arr[i]);
   }       
-const a=[12,45,66,88,70,95,46,74,33,28]
-for (let i=1;i<a.length;i=i+2)
+const a=[12,45,66,88,70,95,46,74,33,28]//10 0-9
+for (let i=0;i<a.length;i=i+2)
 {
-    console.log(a[i])
+    console.log(a[i])//[45,88,95,74,28] //[12,66,70,46,33]
 }
 
 

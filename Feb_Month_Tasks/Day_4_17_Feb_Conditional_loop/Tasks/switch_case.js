@@ -15,3 +15,4 @@ switch (role) {
 
 // Uses strict equality (===)
 // break stops 
+

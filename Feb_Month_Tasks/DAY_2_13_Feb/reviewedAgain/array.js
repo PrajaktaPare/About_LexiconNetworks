@@ -33,7 +33,7 @@ console.log(" ")
 let arr = ["I", "study", "JavaScript"];
 arr.splice(-2,1)
 console.log(arr)
-// console.log(arr.splice(1, 1))//this will remove from 1 index 1 element
+// console.log(arr.splice(1, 1,"demo"))//this will remove from 1 index 1 element
 // console.log(arr)
 
 arr.splice(2, 0, "complex", "language");

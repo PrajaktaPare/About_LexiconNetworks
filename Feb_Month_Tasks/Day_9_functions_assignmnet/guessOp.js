@@ -1,3 +1,5 @@
+"use strict"
+
 const obj = {
   name: "Jyoti",
   greet: function () {

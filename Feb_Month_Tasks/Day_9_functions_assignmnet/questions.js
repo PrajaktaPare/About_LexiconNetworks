@@ -30,8 +30,7 @@
 //   name: "Jyoti",
 //   greet: function () {
 //     console.log(this.name);
-  }
-};
+  
 // Q9. Write a function using rest operator that:
 // Accepts unlimited numbers
 // Returns their sum

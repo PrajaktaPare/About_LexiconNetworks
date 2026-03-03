@@ -7,6 +7,7 @@ function forOfExample(arr) {
 }
 
 forOfExample([10, 20, 30]);
+forOfExample({id:1,name:"Pp"});
 
 obj={ id: 1, name: "Prajakta" }
 //for of for of iteration

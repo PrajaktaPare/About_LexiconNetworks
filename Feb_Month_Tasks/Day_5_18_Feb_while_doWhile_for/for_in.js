@@ -1,14 +1,14 @@
 // // for...in  Iterate over keys (object properties)
 
-// function forInExample(obj) {
-//   for (let [key,value] in obj) {
-//     console.log(key,value)
-//     // console.log(key, obj[key]);
+function forInExample(obj) {
+  for (let [key,value] in Object.entries(obj)) {
+    console.log(key,value)
+    // console.log(key, obj[key]);
 
-//   }
-// }
+  }
+}
 
-// forInExample({ id: 1, name: "Prajakta" });
+forInExample({ id: 1, name: "Prajakta" });
 
 //how we can access key and values at same time in same without methods 
 
