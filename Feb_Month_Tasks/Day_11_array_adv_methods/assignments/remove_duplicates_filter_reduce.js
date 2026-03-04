@@ -23,6 +23,17 @@ function removeDuplicates(arr){
     },[])
 }
 const nums=[1,2,2,3,4,4,5,5,6,7]
-console.log(removeDuplicates(nums))
+// console.log(removeDuplicates(nums))
 
+function sumArr(arr){
+    return arr.reduce((acc,i)=>acc-i,"1")//str->num
+}
 
+console.log(sumArr(nums))
+//acc=0
+//11
+
+//acc=1
+//1+2
+
+////str->num

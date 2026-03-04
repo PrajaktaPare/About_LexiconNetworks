@@ -6,7 +6,10 @@ const users = [
 // Extract all emails from user objects
 
 function extractEmail(arr){
-    return arr.map(user=>user.email)
+    return arr.map(user=>{
+      if(user.name==="Rahul"){
+          return user.email
+    }})
 }
 
 console.log(extractEmail(users))

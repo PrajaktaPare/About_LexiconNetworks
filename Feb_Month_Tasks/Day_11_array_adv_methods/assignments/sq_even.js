@@ -2,5 +2,8 @@
 function sqEven(arr){
     return arr.filter((num)=>num%2==0).map((num)=>num**2)
 }
-const nums=[1,2,3,4,5,6]
+const nums=['1','2','3',4,5,6]
 console.log(sqEven(nums))
+
+//which operators converts implicit
+//why in reduce is gives NaN
