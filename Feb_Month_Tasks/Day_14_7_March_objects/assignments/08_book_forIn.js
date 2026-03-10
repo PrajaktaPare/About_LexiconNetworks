@@ -9,7 +9,7 @@ const book={
 function printKeysValues(obj){
     console.log("Keys : ")
     for(const key in obj){
-        console.log(key)
+        console.log(key,obj[key])
     }
     console.log("\nValues : ")
     for(const key in obj){

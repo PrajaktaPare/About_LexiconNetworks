@@ -3,12 +3,14 @@
 const car={
     brand :"Tata Motors",
     model :"Tata Harrier",
-    price: "15 Lakh"
+    price: "26 Lakh"
 }
-
-console.log(parseInt(car.price)*100000+50000)
+//update in price
+// console.log(parseInt(car.price)*100000+50000)
 function updatePrice(obj){
-    let priceNum=parseInt(car.price)*100000
-    return priceNum+50000
+    obj.price=parseInt(car.price)*100000+50000
+    return obj
 }
+// console.log(car.price)//before calling
 console.log("Price increased by 50k: ",updatePrice(car))
+console.log(car.price)

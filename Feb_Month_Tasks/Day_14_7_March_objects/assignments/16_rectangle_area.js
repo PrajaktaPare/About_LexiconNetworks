@@ -9,3 +9,5 @@ const rectangle={
     }
 }
 console.log("Area : ",rectangle.area())
+
+//call method

@@ -9,6 +9,16 @@
     1: 123,
     "new key":"newKey"
   };
+
+
+  //  const obj = {
+  
+  //   "name": "demo",
+  //   "f-name": "fname",
+  //   age: 21,
+  //   1: 123,
+  //   "new key":"newKey"
+  // };
   console.log("avjdsvfdgukdsfhldsnflkds=================")
   delete obj.name
   console.log(obj.name)
@@ -69,8 +79,15 @@
   const obj = { name: "demo", age: 21 };
 
   console.log("\n Checks");
+  
+  
+  
   //values check
   console.log("69 : ",Object.values(obj).includes("demo"));//true
+
+
+
+
   console.log("'name' in obj:", "name" in obj); // true
   console.log("'email' in obj:", "email" in obj); // false
 
@@ -199,6 +216,7 @@
 
 
 //by using eual to only how to compare objects
+// JSON.stringify(obj1) === JSON.stringify(obj2); 
 
 //next JSON stringify and parse
 
@@ -240,3 +258,24 @@ function callExample() {
 }
 
 console.log(callExample());
+///
+
+
+
+
+
+
+
+///
+console.log("270 : ")
+
+const animal = { species: "Dog" };
+
+const pet = Object.create(animal);
+pet.name = "Buddy";
+pet.species="Cat";
+console.log(animal)
+console.log("name" in pet);//true
+console.log("species" in pet);//true
+console.log(pet.hasOwnProperty("name"));//true
+console.log(pet.hasOwnProperty("species"));//false

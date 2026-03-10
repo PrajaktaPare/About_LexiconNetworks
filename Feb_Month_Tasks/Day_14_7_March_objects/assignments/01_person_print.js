@@ -4,7 +4,8 @@ const person={
     name:"DemoName",
     age:21,
     city:"Pune"
-}
+ }
+
 
 function printObj(obj){
     let result =""
@@ -16,3 +17,41 @@ function printObj(obj){
 }
 
 console.log(printObj(person))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const p2={
+//      name:"DemoName",
+//     age:21,
+//     city:"Pune"
+// }
+
+// console.log(JSON.stringify(person))
+// // const p=JSON.stringify(person)
+// // console.log(JSON.parse(p))
+// console.log(JSON.stringify(p2))
+
+// console.log(JSON.stringify(person)===JSON.stringify(p2))

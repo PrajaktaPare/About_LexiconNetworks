@@ -10,5 +10,7 @@ function depositMoney(obj,amount){
     // console.log(obj.balance)
     return obj
 }
-
+console.log(obj.balance)
 console.log(depositMoney(bankAccount,2000))
+
+//function in objects
