@@ -38,6 +38,14 @@ console.log(obj.a + obj.b && obj.c); //6
 //NaN && 6 //or and operator what it returns 
 //by using operator how to check keys exist or not with ? and ??
 
+
+// const obj = {
+//     name: "PP"
+// }
+
+// console.log(obj?.name ?? "Not available")
+// console.log(obj?.age ?? "Not available")
+
 // A && B
 // How it works
 
@@ -102,22 +110,22 @@ function emp(obj){
 
 emp(newObject)
 
-function emp(obj){
-    const objNew=JSON.parse(obj)
-    // console.log(objNew)
-    objNew.departments.forEach(element => {
-      element.employees.forEach(emp=>{
-        if(emp.salary>40000){
+// function emp(obj){
+//     const objNew=JSON.parse(obj)
+//     // console.log(objNew)
+//     objNew.departments.forEach(element => {
+//       element.employees.forEach(emp=>{
+//         if(emp.salary>40000){
 
-          console.log(emp.id,emp.name)//filter not foreach //array of obj 
-        }
+//           console.log(emp.id,emp.name)//filter not foreach //array of obj 
+//         }
 
-      })
+//       })
       
-    });
-}
+//     });
+// }
 
-emp(newObject)
+// emp(newObject)
 
 //emp salaray >40000
 //id name return department wise

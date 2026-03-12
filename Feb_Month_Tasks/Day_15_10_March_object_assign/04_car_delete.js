@@ -11,8 +11,9 @@ function deleteProp(obj){
     return obj
 }
 
-console.log(car.Year)//before function call
+console.log(car)
 console.log(deleteProp(car))
-console.log(car.Year)//after function call update in original
+console.log(car.Year)
+
 
 

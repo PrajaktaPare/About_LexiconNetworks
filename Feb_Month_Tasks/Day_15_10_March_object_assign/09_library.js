@@ -18,17 +18,14 @@ let library = {
     ]
 };
 
-console.log("The author of the second book : ",library.books[1].author)
+// console.log("The author of the second book : ",library.books[1].author)
 
 
 function available_books(obj){
-    for(const book of library.books){
-        if(book.available){
-            console.log(book)
-        }
-    }
+    return obj.books?.filter(book=>book.available) ??[]
 }
-available_books(library)
+
+console.log("Available books : ",available_books(library))
 
 library.books.push({ title: "Deep Work", author: "Cal Newport", available: true })
 console.log(library)

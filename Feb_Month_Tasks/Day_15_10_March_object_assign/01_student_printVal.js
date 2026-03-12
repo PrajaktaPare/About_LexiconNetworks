@@ -6,10 +6,27 @@ const student={
     grade:"A"
 }
 
-console.log(student.name)
-console.log(student.age)
-console.log(student.grade)
+// console.log(student.name)
+// console.log(student.age)
+// console.log(student.grade)
 
+function printProp(obj){
+    let result =""
+    for(const [key,value] of Object.entries(obj)){
+        result+=`${key} : ${value}\n`
+    }
+    return result
+}
+
+function printProp1(obj){
+    let result =""
+    for(const i in obj){
+        console.log(obj[i])
+        result+=`i\n`
+    }
+    return result
+}
+console.log(printProp1(student))
 
 student.school="Fergusson College, Pune"
 student.grade="A+"

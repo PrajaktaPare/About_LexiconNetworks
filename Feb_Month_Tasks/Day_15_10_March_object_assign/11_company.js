@@ -88,31 +88,47 @@ const company = {
         { id: 4, name: "Pooja", age: 25, salary: 38000 }
       ]
     }
+    // {
+    //   name: "HR",
+    //   employees: [
+    //     { id: 3, name: "name1", age: 28, salary: 40000 },
+    //     { id: 4, name: "name2", age: 25, salary: 38000 }
+    //   ]
+    // }
   ]
 };
-
+// console.log(company.departments[2].employees[0].name)
 //  A): Find Employees in a Specific Department
 //   Given the following company object, filter out employees who work in the "HR" department.
+//find return that element else undefined
 
-// function getEmp(company,dept){
-//  return company.departments.find(d=>d.name===dept)?.employees 
-// }
+function getEmp(company,dept){
+ return company.departments.find(d=>d.name===dept)?.employees ?? []
+}
 
-// console.log(getEmp(company,"HR"))
-// console.log(getEmp(company,""))
+function getEmp1(company,dept){
+    
+    return company.departments.filter(i=>{
+        console.log("112: ",i)
+        }).employees
+}
+
+
+console.log("113 : ",getEmp1(company,"HR"))
+console.log(getEmp(company,""))
 
 
 // B): Find Employees with Salary Greater Than 45,000
 
-// function empSalary(obj){
-//     return company.departments.map((o)=>{
-//         return o.employees.filter(e=>{
-//             return e.salary>45000
-//         })
-//     })
-// }
+function empSalary(obj){
+    return company.departments.map((o)=>{
+        return o.employees.filter(e=>{
+            return e.salary>45000
+        })
+    })
+}
 
-// console.log(empSalary(company))
+console.log(empSalary(company))
 
 //  C): Write a function that calculates the total salary of all employees across all departments.
 
@@ -126,7 +142,12 @@ const company = {
 //     return sum
 // }
 
-// console.log(totalSalary(company))
+function totalSalary(obj){
+    let sum=company.departments.flatMap(d=>d.employees).reduce((sum,emp)=>sum+emp.salary,0)
+    return sum
+}
+
+console.log("Total salary of employees : ",totalSalary(company))
 
 //  D): Find an Employee by ID
 //   Given an employee ID, return the employee's details.
@@ -134,31 +155,40 @@ const company = {
 //    Expected Output:
 //   { id: 3, name: "Om", age: 28, salary: 40000 }
 
-// console.log(company.departments.flatMap(dept=>dept.employees))
-// function findEmployeeById(obj,id){
-//  return obj.departments
-//    .flatMap(d => d.employees)
-//    .find(e => e.id === id)
-// }
-// console.log(findEmployeeById(company,3))
+
+function findEmployeeById(obj,id){
+    let result
+
+    obj.departments.forEach(dept=>{
+        dept.employees.forEach(emp=>{
+            if(emp.id === id){
+                result = emp
+            }
+        })
+    })
+
+    return result
+}
+
+console.log("153  : ",findEmployeeById(company, 3))
 
 // E): Add a New Employee to a Department
 //   Write a function to add a new employee to a specific department.
 //   addEmployee("Engineering", { id: 5, name: "Priyanka", age: 24, salary: 48000 });
 //    Expected Output: The new employee should be added inside the Engineering department.
 
-// function addEmployee(originalObj,dept,obj){
+function addEmployee(originalObj,dept,obj){
     
-//     for(const d of originalObj.departments){
-//         if(d.name === dept){
-//             d.employees.push(obj)
-//         }
-//     }
+    for(const d of originalObj.departments){
+        if(d.name === dept){
+            d.employees.push(obj)
+        }
+    }
 
-//     return obj
-// }
+    return obj
+}
 
-// console.log(addEmployee(company,"Engineer",{ id: 5, name: "Priyanka", age: 24, salary: 48000 }))
+console.log(addEmployee(company,"Engineer",{ id: 5, name: "Priyanka", age: 24, salary: 48000 }))
 
 //   F): Convert Employee Data into an Object
 //   Convert the array of employees into an object where the key is the employee's ID.
@@ -171,35 +201,41 @@ const company = {
 //   }
 
 
-// function convertEmployees(obj){
+function convertEmployees(obj){
 
-//     const result = {}
+    const result = {}
 
-//     for(const dept of obj.departments){
-//         for(const emp of dept.employees){
-//             result[emp.id] = emp
-//         }
-//     }
+    for(const dept of obj.departments){
+        for(const emp of dept.employees){
+            result[emp.id] = emp
+        }
+    }
 
-//     return result
-// }
+    return result
+}
 
-// console.log(convertEmployees(company))
+console.log(convertEmployees(company))
 
 // G): Find the Oldest Employee in the Company
 //   Find the oldest employee among all departments.
 
-// function oldestEmployee(obj){
+function oldestEmployee(obj){
 
-//     return obj.departments
-//         .flatMap(dept => dept.employees)
-//         .reduce((oldest, emp)=>{
-//             return emp.age > oldest.age ? emp : oldest
-//         })
+    let oldest = obj.departments[0].employees[0]
+    // console.log("202:",oldest)//{ id: 1, name: 'Jyoti', age: 27, salary: 50000 }
+    for(const dept of obj.departments){
+        for(const emp of dept.employees){
+            if(emp.age > oldest.age){
+                oldest = emp
+            }
+        }
+    }
 
-// }
+    return oldest
+    
+}
 
-// console.log(oldestEmployee(company))
+console.log("218 : ",oldestEmployee(company))
 
 
     // H): Remove an Employee by ID
@@ -207,20 +243,20 @@ const company = {
     // //   removeEmployeeById(3);
     // //    Expected Output: Employee with ID 3 should be removed from the company object.
 
-// function removeEmployeeById(obj,id){
-//     for(const dept of obj.departments){
-//         const index = dept.employees.findIndex(emp=>emp.id===id)
-//         console.log(index)
-//         if(index!==-1){
-//             dept.employees.splice(index,1)
-//         }
+function removeEmployeeById(obj,id){
+    for(const dept of obj.departments){
+        const index = dept.employees.findIndex(emp=>emp.id===id)
+        console.log("225 : ",index)
+        if(index!==-1){
+            dept.employees.splice(index,1)
+        }
 
-//     }
+    }
 
-//     return obj
-// }
+    return obj
+}
 
-// console.log(company,3)
+console.log(removeEmployeeById(company,4))
 
 
 
@@ -229,13 +265,20 @@ const company = {
 //    Expected Output:
 //   ["Jyoti", "Arti", "Om", "Pooja"]
 
-// function printEmpName(obj){
-    
-//     return company.departments
-//             .flatMap(d => d.employees)
-//             .map(e => e.name)
-// }
-// console.log(printEmpName(company))
+function printEmpName(obj){
+
+    const names = []
+
+    for(const dept of obj.departments){
+        for(const emp of dept.employees){
+            names.push(emp.name)
+        }
+    }
+
+    return names
+}
+//map
+console.log(printEmpName(company))
 
 
 // J): Count Employees in Each Department

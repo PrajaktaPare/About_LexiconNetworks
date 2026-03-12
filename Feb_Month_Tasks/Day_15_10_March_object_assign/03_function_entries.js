@@ -8,9 +8,16 @@ const obj={
 
 
 function printKeysValues(obj){
-//   for(const [key,value] of Object.entries(obj)){
-//     console.log(`${key} : ${value}`)
-//   }
-    return Object.entries(obj)
+
+    const keys = []
+    const values = []
+
+    for(const [key,value] of Object.entries(obj)){
+        keys.push(key)
+        values.push(value)
+    }
+
+    return {keys, values}
 }
-printKeysValues(obj)
+
+console.log(printKeysValues(obj))

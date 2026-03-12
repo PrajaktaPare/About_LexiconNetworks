@@ -22,14 +22,25 @@ const arrOfObj=[
 ]
 
 // console.log(arrOfObj[0].name)
-function printNames(arr){
-    return arr.map((obj)=>obj.name).join(",")
-}
+// function printNames(arr){
+//     return arr.map((obj)=>obj.name)
+// }
 
+function printNames(arr){
+    let result=[]
+    for(const i of arr){
+        if(i.salary>50000){
+            // console.log(i.name)
+            result.push(i.name)
+        }
+    }
+    return result
+}
 console.log(printNames(arrOfObj))
 
+const result=arrOfObj.sort((a,b)=>b.salary-a.salary)
+console.log("42 : ",result[0])
 
-//salarySum
 function returnSalary(arr){
     return arr.filter((obj)=>obj.salary>50000)
 }
@@ -37,10 +48,8 @@ function returnSalary(arr){
 console.log(returnSalary(arrOfObj))
 
 function sumSalary(arr){
-    return arr.reduce((acc,obj)=>{
-        return acc + obj.salary
-    },0)
-}
+    return arr.reduce((acc,obj)=>acc + obj.salary,0)
+}   
 
 console.log("Total salary : ",sumSalary(arrOfObj))
 
