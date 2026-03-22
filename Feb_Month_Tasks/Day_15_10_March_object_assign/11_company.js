@@ -88,6 +88,7 @@ const company = {
         { id: 4, name: "Pooja", age: 25, salary: 38000 }
       ]
     }
+    // ,
     // {
     //   name: "HR",
     //   employees: [

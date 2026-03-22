@@ -13,15 +13,15 @@
 //     return arr
 // }
 
-function removeDuplicates(arr){
-    return arr.reduce((acc,i)  =>
-    {
-        if(!acc.includes(i)){
-            acc.push(i)
-        }
-        return acc
-    },[])
-}
+// function removeDuplicates(arr){
+//     return arr.reduce((acc,i)  =>
+//     {
+//         if(!acc.includes(i)){
+//             acc.push(i)
+//         }
+//         return acc
+//     },[])
+// }
 const nums=[1,2,2,3,4,4,5,5,6,7]
 // console.log(removeDuplicates(nums))
 

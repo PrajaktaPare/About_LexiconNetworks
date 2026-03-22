@@ -9,4 +9,16 @@ function getDateDayMonth(d){
 
 const date=new Date();
 
+// From the current Date, print:
+// hours
+// minutes
+// seconds
+
+function getHoursMinSecMonth(d){
+    return `\nHours : ${d.getHours()}\nMinutes : ${d.getMinutes()}\nSeconds : ${d.getSeconds()}`
+}
+
+
 console.log(getDateDayMonth(date))
+console.log(getHoursMinSecMonth(date))
+

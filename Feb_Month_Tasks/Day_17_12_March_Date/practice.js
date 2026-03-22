@@ -11,6 +11,11 @@ function createDates() {
   console.log("create from string:", fromString);
   console.log("create from parts:", fromParts);
   console.log("create from timestamp:", fromTimestamp);
+
+// create now: 2026-03-13T08:11:43.296Z
+// create from string: 2026-03-12T00:00:00.000Z
+// create from parts: 2026-03-12T10:34:11.000Z
+// create from timestamp: 2026-03-12T16:01:37.946Z
 }
 
 function getters(date) {
@@ -23,13 +28,16 @@ function getters(date) {
   console.log("getSeconds():", date.getSeconds());
   console.log("getMilliseconds():", date.getMilliseconds());
   console.log("getTime():", date.getTime());
+
+// 2028-10-05T10:34:11.000Z
+
 }
 
 function setters() {
   const d = new Date();
 
   d.setFullYear(2028);
-  d.setMonth(5);
+  d.setMonth(5);//0-12
   d.setDate(15);
   d.setHours(10);
   d.setMinutes(30);
@@ -40,26 +48,26 @@ function setters() {
 }
 
 function formats(date) {
-  console.log("toDateString():", date.toDateString());
-  console.log("toTimeString():", date.toTimeString());
-  console.log("toISOString():", date.toISOString());
-  console.log("toUTCString():", date.toUTCString());
-  console.log("toLocaleDateString():", date.toLocaleDateString());
-  console.log("toLocaleTimeString():", date.toLocaleTimeString());
-  console.log("toLocaleString():", date.toLocaleString());
+  console.log("toDateString():", date.toDateString());//returns only the date part of a Date object as a human-readable string
+  console.log("toTimeString():", date.toTimeString());// returns the time portion of a Date object as a string, including the timezone information.
+  console.log("toISOString():", date.toISOString());//ISO format in UTC universal time (+5.30 for india)
+  console.log("toUTCString():", date.toUTCString());//readble
+  console.log("toLocaleDateString():", date.toLocaleDateString());//only the date part formatted according to the user's locale.
+  console.log("toLocaleTimeString():", date.toLocaleTimeString());//returns only the time part formatted according to locale.
+  console.log("toLocaleString():", date.toLocaleString());//returns both date and time together according to locale.
 }
 
 function staticMethods() {
   console.log("Date.now():", Date.now());
-  console.log("Date.parse():", Date.parse("2026-03-12"));
+  console.log("Date.parse():", Date.parse("2026-03-12"));//date string → timestamp (milliseconds).
 }
 
 function run() {
   createDates();
 
-  const d = new Date();
-
-  getters(d);
+  const date = new Date();
+  console.log(date)
+  getters(date);
   setters();
   formats(d);
   staticMethods();

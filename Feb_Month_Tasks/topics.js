@@ -13,3 +13,17 @@
 // shallow copy and reference behavior
 // string conversion from arrays (join, toString)
 // advanced array methods (copyWithin, flat)
+
+
+
+// Array methods: creation and indexing, mutating methods (push, pop, shift, unshift, reverse, sort, splice, copyWithin), non-mutating methods (map, filter, slice, concat, includes), higher-order methods (map, filter, reduce), searching (indexOf, includes, findIndex), sorting with comparator functions, conversion methods (join, toString), advanced methods (flat).
+
+// String methods: length, toUpperCase, toLowerCase, slice, split, trim, includes, indexOf, replace.
+
+// Object methods and operations: object creation (object literal, Object constructor), property access/update/delete, property checking (in, hasOwnProperty), iteration methods (Object.keys, Object.values, Object.entries).
+
+// Math object methods: Math.floor, Math.ceil, Math.round, Math.max, Math.min, Math.sign, Math.abs, Math.random.
+
+// Date object methods: Date constructor, Date.now, getFullYear, getMonth, getDate, getDay, getHours, getMinutes, getSeconds,setters methods toISOString, toLocaleDateString, toTimeString.
+
+//callback function promise then finally catch async await
